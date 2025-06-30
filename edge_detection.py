@@ -12,4 +12,16 @@ laplacian = cv2.Laplacian(img, cv2.CV_64F)
 
 # 3. Canny Edge Detection
 canny = cv2.Canny(img, 100, 200)
+# Display all results using matplotlib
+titles = ['Original Image', 'Sobel X', 'Sobel Y', 'Sobel Combined', 'Laplacian', 'Canny']
+images = [img, sobel_x, sobel_y, sobel_combined, laplacian, canny]
+
+plt.figure(figsize=(12, 8))
+for i in range(6):
+    plt.subplot(2, 3, i+1)
+    plt.imshow(np.abs(images[i]), cmap='gray')
+    plt.title(titles[i])
+    plt.xticks([]), plt.yticks([])
+plt.tight_layout()
+plt.show()
 
