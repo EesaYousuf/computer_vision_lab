@@ -11,5 +11,5 @@ cv2.imshow('Grayscale Image', gray)
 cv2.imwrite('gray_output.jpg', gray)
 # Wait and close windows
 cv2.waitKey(0)
-cv2.destroyAllWindows(
+cv2.destroyAllWindows()
 
